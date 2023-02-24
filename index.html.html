@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-size: 65.5%;
+     margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.section {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(236, 166, 166);
+    background: url("bg.PNG");
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+}
+
+.dummy {
+    background-color: rgba(0, 0, 0, 0.363);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.parentDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 5;
+    position: relative;
+
+
+}
+
+.childDiv-1,
+.childDiv-2 {
+    width: 50%;
+    height: 100%;
+}
+
+.childDiv-1 {
+    /* background-color: rgb(77, 45, 45); */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.name {
+    font-size: 5rem;
+    color: #fff;
+    width: 50%;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 100%;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.788);
+
+}
+
+.sname {
+    color: rgb(240, 143, 32);
+    text-shadow: 0 0 10px rgb(250, 248, 248);
+
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(182, 81, 81); */
+    padding-left: 3rem;
+    height: 70%;
+    justify-content: flex-end;
+    /* align-items: flex-end; */
+}
+
+.para {
+    color: #fff;
+    font-size: 1rem;
+    word-spacing: .5rem;
+    text-align: justify;
+    font-weight: 500;
+    padding-top: 2rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.71);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.content-2 {
+    padding-left: 3rem;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.btn {
+    font-size: 1.2rem;
+    width: max-content;
+    font-weight: 800;
+    padding: .7rem;
+    background-color: rgb(253, 157, 47);
+    color: #fff;
+    border-radius: 10px 10px 10px 10px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px rgba(30, 24, 9, 0.652);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn:hover {
+    color: rgb(253, 157, 47);
+    background-color: #fff;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.childDiv-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+.logo {
+    background-color: #fff;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 30px solid rgb(253, 157, 47);
+    overflow: hidden;
+    box-shadow: 0 0 10px #000;
+}
+
+
+@media screen and (max-width:1060px) {
+
+    .section .parentDiv {
+        flex-direction: column-reverse;
+    }
+
+    .parentDiv .childDiv-1 {
+        width: 100%;
+    }
+    .parentDiv .childDiv-2 {
+        width: 100%;
+    }
+
+    .childDiv-1 .content {
+        width: 90vw;
+        height: 60%;
+    }
+
+    .content .name {
+        font-size: 3rem;
+        width: 80%;
+    }
+
+    .content .para {
+        width: 100%;
+    }
+    .childDiv-2 .logo{
+        width: 225px;
+        height: 225px;
+        border-width: 10px;
+        border-radius:  50%  ;
+    }
+
+}
+    </style>
+</head>
+
+
+<body>
+
+    <section class="section" >
+        <nav>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+             <a href="#about">About</a>
+        </div>
+        <div style="padding-left:16px">
+            <h2>Top Navigation Example</h2>
+             <p>Some content..</p>
+        </div>
+
+
+        </nav>
+        <div class="dummy"></div>
+        <div class="parentDiv">
+            <div class="childDiv-1">
+                <div class="content">
+                    <h1 class="name">CREATIVE <span class="sname">MARKETING AGENCY</span></h1>
+                
+                    <h1 class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, similique cum debitis quasi repudiandae molestias soluta minima maxime quas quidem?</h1>
+                </div>
+                <div class="content-2">
+                    <button type="button" class="btn">
+                        Join Now
+                    </button>
+                   
+                </div>
+            </div>
+
+            <div class="childDiv-2">
+                <div class="logo">
+                    <img src="bg.jpg" class="logo_img" width="100%" height="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
